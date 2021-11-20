@@ -34,35 +34,44 @@
             // 
             // settingsButton
             // 
+            this.settingsButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.settingsButton.AutoEllipsis = true;
             this.settingsButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.settingsButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.settingsButton.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.settingsButton.Location = new System.Drawing.Point(42, 645);
+            this.settingsButton.Location = new System.Drawing.Point(26, 592);
             this.settingsButton.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.settingsButton.Name = "settingsButton";
-            this.settingsButton.Size = new System.Drawing.Size(198, 63);
+            this.settingsButton.Size = new System.Drawing.Size(174, 73);
             this.settingsButton.TabIndex = 0;
             this.settingsButton.Text = "Settings\r\n";
             this.settingsButton.UseVisualStyleBackColor = true;
             this.settingsButton.Click += new System.EventHandler(this.settingsButton_Click);
+            this.settingsButton.MouseEnter += new System.EventHandler(this.settingsButton_MouseEnter);
+            this.settingsButton.MouseLeave += new System.EventHandler(this.settingsButton_MouseLeave);
             // 
             // addAppsButton
             // 
+            this.addAppsButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.addAppsButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.addAppsButton.Location = new System.Drawing.Point(297, 645);
+            this.addAppsButton.Location = new System.Drawing.Point(235, 592);
             this.addAppsButton.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.addAppsButton.Name = "addAppsButton";
-            this.addAppsButton.Size = new System.Drawing.Size(158, 63);
+            this.addAppsButton.Size = new System.Drawing.Size(189, 73);
             this.addAppsButton.TabIndex = 1;
             this.addAppsButton.Text = "Add Apps";
             this.addAppsButton.UseVisualStyleBackColor = true;
             this.addAppsButton.Click += new System.EventHandler(this.addAppsButton_Click);
+            this.addAppsButton.MouseEnter += new System.EventHandler(this.addAppsButton_MouseEnter);
+            this.addAppsButton.MouseLeave += new System.EventHandler(this.addAppsButton_MouseLeave);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1467, 727);
+            this.ClientSize = new System.Drawing.Size(893, 683);
             this.Controls.Add(this.addAppsButton);
             this.Controls.Add(this.settingsButton);
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);

@@ -16,10 +16,14 @@ namespace ProductivityApp
     public partial class Form1 : Form
     {
 
-        //private string allowedAppsFile = "allowed_apps.json";
-        private Rectangle originalSettingsBtn;
+        private string allowedAppsFile = "allowed_apps.json";
+        private Rectangle initialSettingsBtn;
+        private Rectangle initialAddAppsBtn;
 
-        private Size originalFormSize = new Size(900, 900);
+        private int formWidth;
+        private int formHeight;
+
+        private int count = 1;
 
         public Form1()
         {
@@ -28,12 +32,14 @@ namespace ProductivityApp
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            originalFormSize.Height = this.Size.Height;
-            originalFormSize.Width = this.Size.Width;
+            formHeight = this.Size.Height;
+            formWidth = this.Size.Width;
 
-            originalSettingsBtn = new Rectangle(settingsButton.Location.X, settingsButton.Location.Y, settingsButton.Width, settingsButton.Height);
-            resizeControl();
+            initialSettingsBtn = new Rectangle(settingsButton.Location.X, settingsButton.Location.Y, settingsButton.Width, settingsButton.Height);
+            initialAddAppsBtn = new Rectangle(addAppsButton.Location.X, addAppsButton.Location.Y, addAppsButton.Width, addAppsButton.Height);
         }
+
+        #region Button Click
 
         private void settingsButton_Click(object sender, EventArgs e)
         {
@@ -42,7 +48,6 @@ namespace ProductivityApp
 
         private void addAppsButton_Click(object sender, EventArgs e)
         {
-            /*
             OpenFileDialog o = new OpenFileDialog();
             o.Filter = "Exe Files (.exe)|*.exe|All Files (*.*)|*.*";
             DialogResult file = o.ShowDialog();
@@ -53,42 +58,78 @@ namespace ProductivityApp
                 string jsonVal = JsonConvert.SerializeObject(newApp);
                 writeToAllowedApps(jsonVal);
             }
-            */
-
         }
 
-        /*private void writeToAllowedApps(string jsonVal)
+        #endregion
+
+        private void writeToAllowedApps(string jsonVal)
         {
             using(StreamWriter f = File.CreateText(allowedAppsFile))
             {
                 JsonSerializer serializer = new JsonSerializer();
                 serializer.Serialize(f, jsonVal);
             }
-        }*/
+        }
 
-        /*private void resizeChildrenControls() 
+        #region Resize Buttons
+
+        private void resizeButtons()
         {
-            resizeControl(originalSettingsBtn, settingsButton);
-        }*/
+            resize(initialSettingsBtn, settingsButton);
+            resize(initialAddAppsBtn, addAppsButton);
+        }
 
-        private void resizeControl()
+        private void resize(Rectangle originalButton, Control newButton)
         {
-            Debug.WriteLine(originalFormSize);
-            float xRatio = (float)(this.Width)/(float)(originalFormSize.Width);
-            float yRatio = (float)(this.Height)/(float)(originalFormSize.Height);
+            float xRatio = (float)(this.Width)/(float)(formWidth);
+            float yRatio = (float)(this.Height)/(float)(formHeight);
 
-            int newX = (int)(originalSettingsBtn.Location.X * xRatio);
-            int newY = (int)(originalSettingsBtn.Location.Y * yRatio);
-            //int newWidth = (int)(originalControlRect.Size.Width * xRatio);
-            //int newHeight = (int)(originalControlRect.Size.Height * yRatio);
+            int newX = (int)(originalButton.Location.X * xRatio);
+            int newY = (int)(originalButton.Location.Y * yRatio);
+            int newWidth = (int)(originalButton.Size.Width * xRatio);
+            int newHeight = (int)(originalButton.Size.Height * yRatio);
 
-            settingsButton.Location = new Point(newX, newY);
-            //control.Size = new Size(newWidth, newHeight);
+            if (count > 2)      //First 2 calls are ignored since Form is still being made
+            {
+                newButton.Location = new Point(newX, newY);
+                newButton.Size = new Size(newWidth, newHeight);
+            }
+            count++;
         }
 
         private void Form1_Resize(object sender, EventArgs e)
         {
-            resizeControl();
+            resizeButtons();
         }
+
+        #endregion
+
+        #region Mouse Hover Animation
+
+        private void settingsButton_MouseEnter(object sender, EventArgs e)
+        {
+            settingsButton.ForeColor = Color.White;
+            settingsButton.BackColor = Color.Black;
+        }
+
+        private void settingsButton_MouseLeave(object sender, EventArgs e)
+        {
+            settingsButton.ForeColor = Color.Black;
+            settingsButton.BackColor = Color.White;
+        }
+
+        private void addAppsButton_MouseEnter(object sender, EventArgs e)
+        {
+            addAppsButton.ForeColor = Color.White;
+            addAppsButton.BackColor = Color.Black;
+        }
+
+        private void addAppsButton_MouseLeave(object sender, EventArgs e)
+        {
+            addAppsButton.ForeColor = Color.Black;
+            addAppsButton.BackColor = Color.White;
+        }
+
+        #endregion
     }
 }
