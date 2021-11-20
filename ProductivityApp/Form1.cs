@@ -10,6 +10,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Newtonsoft.Json;
+using MaterialSkin;
+using MaterialSkin.Controls;
 
 namespace ProductivityApp
 {
@@ -38,9 +40,11 @@ namespace ProductivityApp
         {
             InitializeComponent();
             this.homeForm = homeForm;
+            this.BackColor = Color.FromArgb(30, 30, 30);
         }
 
-        
+
+
 
         private void addAppsButton_Click(object sender, EventArgs e)
         {
@@ -55,6 +59,12 @@ namespace ProductivityApp
                 apps.Add(fileName);
                 string jsonVal = JsonConvert.SerializeObject(apps.ToArray());
                 File.WriteAllText(allowedAppsFile, jsonVal);
+
+                foreach(string appRoot in apps)
+                {
+                    AllowedApps.appNameInRoot.Add(GetAppName(appRoot), appRoot);
+                }
+
             }
 
         }

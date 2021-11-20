@@ -16,6 +16,7 @@ namespace ProductivityApp
 
         private HomeInterface homePage;
         private string allowedAppsFile = AppContext.BaseDirectory + "allowed_apps.json";
+        public static Dictionary<string, string> appNameInRoot = new Dictionary<string, string>();
 
         public AllowedApps(HomeInterface homePage)
         {

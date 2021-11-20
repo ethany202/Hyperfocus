@@ -67,7 +67,9 @@
             // dateTime
             // 
             this.dateTime.AutoSize = true;
+            this.dateTime.BackColor = System.Drawing.Color.Transparent;
             this.dateTime.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTime.ForeColor = System.Drawing.Color.Gainsboro;
             this.dateTime.Location = new System.Drawing.Point(118, 19);
             this.dateTime.Name = "dateTime";
             this.dateTime.Size = new System.Drawing.Size(47, 20);

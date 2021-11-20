@@ -24,5 +24,6 @@ namespace ProductivityApp
             homePage.BringToFront();
             homePage.Show();
         }
+        
     }
 }

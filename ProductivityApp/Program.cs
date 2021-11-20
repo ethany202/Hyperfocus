@@ -14,6 +14,13 @@ namespace ProductivityApp
         [STAThread]
         static void Main()
         {
+
+            HashSet<string> apps = new HashSet<string>(Form1.GetCurrentlyAllowedApps());
+            foreach (string appRoot in apps)
+            {
+                AllowedApps.appNameInRoot.Add(Form1.GetAppName(appRoot), appRoot);
+            }
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new HomeInterface());

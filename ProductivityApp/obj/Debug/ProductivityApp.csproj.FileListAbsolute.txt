@@ -33,3 +33,4 @@ C:\Users\yanch\Desktop\productivity-app\ProductivityApp\obj\Debug\ProductivityAp
 C:\Users\yanch\Desktop\productivity-app\ProductivityApp\obj\Debug\ProductivityApp.EditAgendaForm.resources
 C:\Users\yanch\Desktop\productivity-app\ProductivityApp\obj\Debug\ProductivityApp.AllowedApps.resources
 C:\Users\yanch\Desktop\productivity-app\ProductivityApp\obj\Debug\ProductivityApp.ArtificialDesktop.resources
+C:\Users\yanch\Desktop\productivity-app\ProductivityApp\bin\Debug\MaterialSkin.dll

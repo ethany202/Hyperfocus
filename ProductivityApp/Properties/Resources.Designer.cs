@@ -73,6 +73,16 @@ namespace ProductivityApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap back_100px {
+            get {
+                object obj = ResourceManager.GetObject("back_100px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap eye_24px {
             get {
                 object obj = ResourceManager.GetObject("eye_24px", resourceCulture);

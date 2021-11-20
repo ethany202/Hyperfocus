@@ -10,6 +10,7 @@ namespace ProductivityApp
     {
         private double timeFrame; //In minutes
         private HashSet<string> authorizedApps;
+        private string eventName;
 
         public Event()
         {
@@ -19,8 +20,8 @@ namespace ProductivityApp
 
         public void IncreaseTimeFrame(double timeInterval)
         {
-            this.timeFrame+=timeInterval;
-            
+            this.timeFrame += timeInterval;
+
         }
 
         public double GetTimeFrame()
@@ -31,6 +32,21 @@ namespace ProductivityApp
         public void SetAuthorizedApps(HashSet<string> authorizedApps)
         {
             this.authorizedApps = authorizedApps;
+        }
+
+        public int GetHours()
+        {
+            return (int)timeFrame / 60;
+        }
+
+        public int GetMinutes()
+        {
+            return (int)timeFrame % 60;
+        }
+
+        public void SetEventName(string eventName)
+        {
+            this.eventName = eventName;
         }
 
     }
