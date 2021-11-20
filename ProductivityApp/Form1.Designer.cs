@@ -37,9 +37,10 @@
             this.settingsButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.settingsButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.settingsButton.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.settingsButton.Location = new System.Drawing.Point(23, 399);
+            this.settingsButton.Location = new System.Drawing.Point(42, 645);
+            this.settingsButton.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.settingsButton.Name = "settingsButton";
-            this.settingsButton.Size = new System.Drawing.Size(108, 39);
+            this.settingsButton.Size = new System.Drawing.Size(198, 63);
             this.settingsButton.TabIndex = 0;
             this.settingsButton.Text = "Settings\r\n";
             this.settingsButton.UseVisualStyleBackColor = true;
@@ -48,9 +49,10 @@
             // addAppsButton
             // 
             this.addAppsButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.addAppsButton.Location = new System.Drawing.Point(162, 399);
+            this.addAppsButton.Location = new System.Drawing.Point(297, 645);
+            this.addAppsButton.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.addAppsButton.Name = "addAppsButton";
-            this.addAppsButton.Size = new System.Drawing.Size(86, 39);
+            this.addAppsButton.Size = new System.Drawing.Size(158, 63);
             this.addAppsButton.TabIndex = 1;
             this.addAppsButton.Text = "Add Apps";
             this.addAppsButton.UseVisualStyleBackColor = true;
@@ -58,13 +60,16 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1467, 727);
             this.Controls.Add(this.addAppsButton);
             this.Controls.Add(this.settingsButton);
+            this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Resize += new System.EventHandler(this.Form1_Resize);
             this.ResumeLayout(false);
 
         }
