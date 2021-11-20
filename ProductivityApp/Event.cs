@@ -8,8 +8,7 @@ namespace ProductivityApp
 {
     public class Event
     {
-        private double startTime;
-        private double endTime;
+        private double timeFrame; //In minutes
         private HashSet<string> authorizedApps;
 
         public Event()
@@ -17,15 +16,21 @@ namespace ProductivityApp
             authorizedApps = new HashSet<string>();
         }
 
-        public void SetStartTime(double startTime)
+        public void SetTimeFrame(double timeFrame)
         {
-            this.startTime = startTime;
+            this.timeFrame = timeFrame;
             
         }
 
-        public void SetEndTime(double endTime)
+        public double GetTimeFrame()
         {
-            this.endTime = endTime;
+            return timeFrame;
         }
+
+        public void SetAuthorizedApps(HashSet<string> authorizedApps)
+        {
+            this.authorizedApps = authorizedApps;
+        }
+
     }
 }

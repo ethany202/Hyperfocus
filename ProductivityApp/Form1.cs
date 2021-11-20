@@ -16,7 +16,7 @@ namespace ProductivityApp
     public partial class Form1 : Form
     {
 
-        private string allowedAppsFile = AppContext.BaseDirectory+"allowed_apps.json";
+        private static string allowedAppsFile = AppContext.BaseDirectory+"allowed_apps.json";
         private HomeInterface homeForm;
 
         public Form1(HomeInterface homeForm)
@@ -25,10 +25,7 @@ namespace ProductivityApp
             this.homeForm = homeForm;
         }
 
-        private void settingsButton_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void addAppsButton_Click(object sender, EventArgs e)
         {
@@ -46,13 +43,13 @@ namespace ProductivityApp
             }
 
         }
-        public string GetFileName(string unparsedName)
+        public static string GetAppName(string unparsedName)
         {
             int index = unparsedName.LastIndexOf("\\");
             return unparsedName.Substring(index + 1);
         }
 
-        public IList<string> GetCurrentlyAllowedApps()
+        public static IList<string> GetCurrentlyAllowedApps()
         {
             if(new FileInfo(allowedAppsFile).Length == 0)
             {
@@ -80,6 +77,22 @@ namespace ProductivityApp
             agendaPage.Show();
 
             new Agenda();
+        }
+
+        private void settingsButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void seeAllowedApps_Click(object sender, EventArgs e)
+        {
+            AllowedApps allowedApps = new AllowedApps(homeForm);
+            allowedApps.TopLevel = false;
+            allowedApps.Dock = DockStyle.Fill;
+            homeForm.panel1.Controls.Add(allowedApps);
+            homeForm.panel1.Tag = allowedApps;
+            allowedApps.BringToFront();
+            allowedApps.Show();
         }
     }
 }

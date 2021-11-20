@@ -14,12 +14,27 @@ namespace ProductivityApp
     {
 
         private int authorizedAppCount;
+        private DateTime startTime;
+        private Agenda currentAgenda;
+        private Event currentEvent;
+
 
         public ArtificialDesktop()
         {
             InitializeComponent();
+            startTime = DateTime.Now;
+            currentAgenda = GlobalSchedule.GetCurrentAgenda();
+            currentEvent = currentAgenda.GetAllEvents().Peek();
         }
 
-
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            TimeSpan difference = DateTime.Now.Subtract(startTime);
+            if (difference.TotalMinutes == currentEvent.GetTimeFrame())
+            {
+                this.Close();
+                currentAgenda.GetAllEvents().Dequeue();
+            }
+        }
     }
 }

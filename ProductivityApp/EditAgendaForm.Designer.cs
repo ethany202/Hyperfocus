@@ -31,12 +31,14 @@
             this.addEvent = new System.Windows.Forms.Button();
             this.eventName = new System.Windows.Forms.TextBox();
             this.earlyTime = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.endTime = new System.Windows.Forms.Label();
+            this.timeFrame = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.allEvents = new System.Windows.Forms.ListView();
             this.back = new System.Windows.Forms.Button();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // addEvent
@@ -58,34 +60,26 @@
             // 
             // earlyTime
             // 
-            this.earlyTime.Location = new System.Drawing.Point(511, 59);
+            this.earlyTime.Location = new System.Drawing.Point(454, 56);
             this.earlyTime.Name = "earlyTime";
             this.earlyTime.Size = new System.Drawing.Size(22, 24);
             this.earlyTime.TabIndex = 3;
             this.earlyTime.Text = "^";
             this.earlyTime.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // timeFrame
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(422, 82);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "label1";
-            // 
-            // endTime
-            // 
-            this.endTime.AutoSize = true;
-            this.endTime.Location = new System.Drawing.Point(486, 86);
-            this.endTime.Name = "endTime";
-            this.endTime.Size = new System.Drawing.Size(34, 13);
-            this.endTime.TabIndex = 5;
-            this.endTime.Text = "18:30";
+            this.timeFrame.AutoSize = true;
+            this.timeFrame.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timeFrame.Location = new System.Drawing.Point(421, 82);
+            this.timeFrame.Name = "timeFrame";
+            this.timeFrame.Size = new System.Drawing.Size(124, 16);
+            this.timeFrame.TabIndex = 4;
+            this.timeFrame.Text = "01:00 (Hour: Minute)\r\n";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(406, 56);
+            this.button1.Location = new System.Drawing.Point(397, 56);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(22, 23);
             this.button1.TabIndex = 6;
@@ -94,21 +88,27 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(434, 56);
+            this.button2.Location = new System.Drawing.Point(425, 56);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(23, 23);
             this.button2.TabIndex = 7;
             this.button2.Text = "button2";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // listView1
+            // allEvents
             // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(52, 142);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(699, 278);
-            this.listView1.TabIndex = 8;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.allEvents.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3});
+            this.allEvents.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.allEvents.HideSelection = false;
+            this.allEvents.Location = new System.Drawing.Point(63, 175);
+            this.allEvents.Name = "allEvents";
+            this.allEvents.Size = new System.Drawing.Size(699, 278);
+            this.allEvents.TabIndex = 8;
+            this.allEvents.UseCompatibleStateImageBehavior = false;
+            this.allEvents.View = System.Windows.Forms.View.Details;
             // 
             // back
             // 
@@ -120,17 +120,33 @@
             this.back.UseVisualStyleBackColor = true;
             this.back.Click += new System.EventHandler(this.back_Click);
             // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Event Name";
+            this.columnHeader1.Width = 100;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Time Frame";
+            this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader2.Width = 100;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Authorized Apps";
+            this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.columnHeader3.Width = 120;
+            // 
             // EditAgendaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(836, 501);
             this.Controls.Add(this.back);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.allEvents);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.endTime);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.timeFrame);
             this.Controls.Add(this.earlyTime);
             this.Controls.Add(this.eventName);
             this.Controls.Add(this.addEvent);
@@ -146,11 +162,13 @@
         private System.Windows.Forms.Button addEvent;
         private System.Windows.Forms.TextBox eventName;
         private System.Windows.Forms.Button earlyTime;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label endTime;
+        private System.Windows.Forms.Label timeFrame;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView allEvents;
         private System.Windows.Forms.Button back;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
     }
 }

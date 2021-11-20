@@ -80,6 +80,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Agenda.cs" />
+    <Compile Include="AllowedApps.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllowedApps.Designer.cs">
+      <DependentUpon>AllowedApps.cs</DependentUpon>
+    </Compile>
     <Compile Include="ArtificialDesktop.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,6 +114,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AllowedApps.resx">
+      <DependentUpon>AllowedApps.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ArtificialDesktop.resx">
+      <DependentUpon>ArtificialDesktop.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EditAgendaForm.resx">
       <DependentUpon>EditAgendaForm.cs</DependentUpon>
     </EmbeddedResource>

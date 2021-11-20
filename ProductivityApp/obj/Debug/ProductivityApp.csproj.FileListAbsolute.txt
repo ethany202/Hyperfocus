@@ -31,3 +31,5 @@ C:\Users\yanch\Desktop\productivity-app\ProductivityApp\bin\Debug\System.Threadi
 C:\Users\yanch\Desktop\productivity-app\ProductivityApp\bin\Debug\System.ValueTuple.xml
 C:\Users\yanch\Desktop\productivity-app\ProductivityApp\obj\Debug\ProductivityApp.HomeInterface.resources
 C:\Users\yanch\Desktop\productivity-app\ProductivityApp\obj\Debug\ProductivityApp.EditAgendaForm.resources
+C:\Users\yanch\Desktop\productivity-app\ProductivityApp\obj\Debug\ProductivityApp.AllowedApps.resources
+C:\Users\yanch\Desktop\productivity-app\ProductivityApp\obj\Debug\ProductivityApp.ArtificialDesktop.resources

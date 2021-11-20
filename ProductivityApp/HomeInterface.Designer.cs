@@ -35,14 +35,14 @@
             // 
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 451);
+            this.panel1.Size = new System.Drawing.Size(836, 501);
             this.panel1.TabIndex = 0;
             // 
             // HomeInterface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(836, 501);
             this.Controls.Add(this.panel1);
             this.Name = "HomeInterface";
             this.Text = "HomeInterface";
