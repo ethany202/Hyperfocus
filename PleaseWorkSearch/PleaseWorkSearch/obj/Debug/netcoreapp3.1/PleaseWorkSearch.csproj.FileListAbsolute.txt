@@ -1,0 +1,16 @@
+D:\Timetracker\PleaseWorkSearch\PleaseWorkSearch\bin\Debug\netcoreapp3.1\PleaseWorkSearch.exe
+D:\Timetracker\PleaseWorkSearch\PleaseWorkSearch\bin\Debug\netcoreapp3.1\PleaseWorkSearch.deps.json
+D:\Timetracker\PleaseWorkSearch\PleaseWorkSearch\bin\Debug\netcoreapp3.1\PleaseWorkSearch.runtimeconfig.json
+D:\Timetracker\PleaseWorkSearch\PleaseWorkSearch\bin\Debug\netcoreapp3.1\PleaseWorkSearch.runtimeconfig.dev.json
+D:\Timetracker\PleaseWorkSearch\PleaseWorkSearch\bin\Debug\netcoreapp3.1\PleaseWorkSearch.dll
+D:\Timetracker\PleaseWorkSearch\PleaseWorkSearch\bin\Debug\netcoreapp3.1\PleaseWorkSearch.pdb
+D:\Timetracker\PleaseWorkSearch\PleaseWorkSearch\obj\Debug\netcoreapp3.1\PleaseWorkSearch.csproj.AssemblyReference.cache
+D:\Timetracker\PleaseWorkSearch\PleaseWorkSearch\obj\Debug\netcoreapp3.1\PleaseWorkSearch.Form1.resources
+D:\Timetracker\PleaseWorkSearch\PleaseWorkSearch\obj\Debug\netcoreapp3.1\PleaseWorkSearch.csproj.GenerateResource.cache
+D:\Timetracker\PleaseWorkSearch\PleaseWorkSearch\obj\Debug\netcoreapp3.1\PleaseWorkSearch.GeneratedMSBuildEditorConfig.editorconfig
+D:\Timetracker\PleaseWorkSearch\PleaseWorkSearch\obj\Debug\netcoreapp3.1\PleaseWorkSearch.AssemblyInfoInputs.cache
+D:\Timetracker\PleaseWorkSearch\PleaseWorkSearch\obj\Debug\netcoreapp3.1\PleaseWorkSearch.AssemblyInfo.cs
+D:\Timetracker\PleaseWorkSearch\PleaseWorkSearch\obj\Debug\netcoreapp3.1\PleaseWorkSearch.csproj.CoreCompileInputs.cache
+D:\Timetracker\PleaseWorkSearch\PleaseWorkSearch\obj\Debug\netcoreapp3.1\PleaseWorkSearch.dll
+D:\Timetracker\PleaseWorkSearch\PleaseWorkSearch\obj\Debug\netcoreapp3.1\PleaseWorkSearch.pdb
+D:\Timetracker\PleaseWorkSearch\PleaseWorkSearch\obj\Debug\netcoreapp3.1\PleaseWorkSearch.genruntimeconfig.cache
