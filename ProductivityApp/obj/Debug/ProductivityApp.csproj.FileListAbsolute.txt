@@ -23,3 +23,4 @@ C:\Users\User\productivity-app\ProductivityApp\obj\Debug\ProductivityApp.csproj.
 C:\Users\User\productivity-app\ProductivityApp\obj\Debug\ProductivityApp.csproj.CoreCompileInputs.cache
 C:\Users\User\productivity-app\ProductivityApp\obj\Debug\ProductivityApp.exe
 C:\Users\User\productivity-app\ProductivityApp\obj\Debug\ProductivityApp.pdb
+C:\Users\User\productivity-app\ProductivityApp\obj\Debug\ProductivityApp.DesktopFrontEnd.resources
