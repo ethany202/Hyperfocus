@@ -58,5 +58,25 @@ namespace ProductivityApp
         {
             authorizedApps.Add(appReference);
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void eventName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timeFrame_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void minus10Min_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
