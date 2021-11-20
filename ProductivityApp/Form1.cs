@@ -1,25 +1,28 @@
-﻿using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Newtonsoft.Json;
 
 namespace ProductivityApp
 {
     public partial class Form1 : Form
     {
 
-        private string allowedAppsFile = "allowed_apps.json";
+        private string allowedAppsFile = AppContext.BaseDirectory+"allowed_apps.json";
+        private HomeInterface homeForm;
 
-        public Form1()
+        public Form1(HomeInterface homeForm)
         {
             InitializeComponent();
+            this.homeForm = homeForm;
         }
 
         private void settingsButton_Click(object sender, EventArgs e)
@@ -32,23 +35,51 @@ namespace ProductivityApp
             OpenFileDialog o = new OpenFileDialog();
             o.Filter = "Exe Files (.exe)|*.exe|All Files (*.*)|*.*";
             DialogResult file = o.ShowDialog();
-            if(file == DialogResult.OK)
+            if (File.Exists(allowedAppsFile) && file == DialogResult.OK)
             {
                 string fileName = o.FileName;
-                AllowedApp newApp = new AllowedApp(fileName, 0.0);
-                string jsonVal = JsonConvert.SerializeObject(newApp);
-                writeToAllowedApps(jsonVal);
+
+                HashSet<string> apps = new HashSet<string>(GetCurrentlyAllowedApps());
+                apps.Add(fileName);
+                string jsonVal = JsonConvert.SerializeObject(apps.ToArray());
+                File.WriteAllText(allowedAppsFile, jsonVal);
             }
 
         }
-
-        private void writeToAllowedApps(string jsonVal)
+        public string GetFileName(string unparsedName)
         {
-            using(StreamWriter f = File.CreateText(allowedAppsFile))
+            int index = unparsedName.LastIndexOf("\\");
+            return unparsedName.Substring(index + 1);
+        }
+
+        public IList<string> GetCurrentlyAllowedApps()
+        {
+            if(new FileInfo(allowedAppsFile).Length == 0)
             {
-                JsonSerializer serializer = new JsonSerializer();
-                serializer.Serialize(f, jsonVal);
+                return new List<string>();
             }
+            IList<string> currentlyAllowedApps = new List<string>();
+            string jsonVal = File.ReadAllText(allowedAppsFile);
+
+            JsonTextReader reader = new JsonTextReader(new StringReader(jsonVal));
+            reader.SupportMultipleContent = true;
+            JsonSerializer serializer = new JsonSerializer();
+            currentlyAllowedApps = serializer.Deserialize<List<string>>(reader);
+            return currentlyAllowedApps;
+        }
+
+        private void newAgendaButton_Click(object sender, EventArgs e)
+        {
+            EditAgendaForm agendaPage = new EditAgendaForm(homeForm);
+            agendaPage.TopLevel = false;
+            agendaPage.FormBorderStyle = FormBorderStyle.None;
+            agendaPage.Dock = DockStyle.Fill;
+            homeForm.panel1.Controls.Add(agendaPage);
+            homeForm.panel1.Tag = agendaPage;
+            agendaPage.BringToFront();
+            agendaPage.Show();
+
+            new Agenda();
         }
     }
 }

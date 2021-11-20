@@ -12,9 +12,14 @@ namespace ProductivityApp
 {
     public partial class ArtificialDesktop : Form
     {
+
+        private int authorizedAppCount;
+
         public ArtificialDesktop()
         {
             InitializeComponent();
         }
+
+
     }
 }
