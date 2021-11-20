@@ -14,11 +14,12 @@ namespace ProductivityApp
         public Event()
         {
             authorizedApps = new HashSet<string>();
+            timeFrame = 60;
         }
 
-        public void SetTimeFrame(double timeFrame)
+        public void IncreaseTimeFrame(double timeInterval)
         {
-            this.timeFrame = timeFrame;
+            this.timeFrame+=timeInterval;
             
         }
 

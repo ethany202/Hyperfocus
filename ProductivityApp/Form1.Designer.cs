@@ -30,7 +30,6 @@
         {
             this.newAgendaButton = new System.Windows.Forms.Button();
             this.addAppsButton = new System.Windows.Forms.Button();
-            this.settingsButton = new System.Windows.Forms.Button();
             this.seeAllowedApps = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -55,19 +54,6 @@
             this.addAppsButton.UseVisualStyleBackColor = true;
             this.addAppsButton.Click += new System.EventHandler(this.addAppsButton_Click);
             // 
-            // settingsButton
-            // 
-            this.settingsButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.settingsButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.settingsButton.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.settingsButton.Location = new System.Drawing.Point(2, 366);
-            this.settingsButton.Name = "settingsButton";
-            this.settingsButton.Size = new System.Drawing.Size(108, 39);
-            this.settingsButton.TabIndex = 0;
-            this.settingsButton.Text = "Settings\r\n";
-            this.settingsButton.UseVisualStyleBackColor = true;
-            this.settingsButton.Click += new System.EventHandler(this.settingsButton_Click);
-            // 
             // seeAllowedApps
             // 
             this.seeAllowedApps.Location = new System.Drawing.Point(2, 456);
@@ -85,7 +71,6 @@
             this.ClientSize = new System.Drawing.Size(836, 501);
             this.Controls.Add(this.seeAllowedApps);
             this.Controls.Add(this.addAppsButton);
-            this.Controls.Add(this.settingsButton);
             this.Controls.Add(this.newAgendaButton);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -94,7 +79,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button settingsButton;
         private System.Windows.Forms.Button addAppsButton;
         private System.Windows.Forms.Button newAgendaButton;
         private System.Windows.Forms.Button seeAllowedApps;

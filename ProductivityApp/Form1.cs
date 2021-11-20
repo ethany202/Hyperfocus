@@ -79,11 +79,6 @@ namespace ProductivityApp
             new Agenda();
         }
 
-        private void settingsButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void seeAllowedApps_Click(object sender, EventArgs e)
         {
             AllowedApps allowedApps = new AllowedApps(homeForm);
