@@ -1,0 +1,14 @@
+D:\Timetracker\TimeTracker\TimeTracker\bin\Debug\netcoreapp3.1\TimeTracker.exe
+D:\Timetracker\TimeTracker\TimeTracker\bin\Debug\netcoreapp3.1\TimeTracker.deps.json
+D:\Timetracker\TimeTracker\TimeTracker\bin\Debug\netcoreapp3.1\TimeTracker.runtimeconfig.json
+D:\Timetracker\TimeTracker\TimeTracker\bin\Debug\netcoreapp3.1\TimeTracker.runtimeconfig.dev.json
+D:\Timetracker\TimeTracker\TimeTracker\bin\Debug\netcoreapp3.1\TimeTracker.dll
+D:\Timetracker\TimeTracker\TimeTracker\bin\Debug\netcoreapp3.1\TimeTracker.pdb
+D:\Timetracker\TimeTracker\TimeTracker\obj\Debug\netcoreapp3.1\TimeTracker.csproj.AssemblyReference.cache
+D:\Timetracker\TimeTracker\TimeTracker\obj\Debug\netcoreapp3.1\TimeTracker.GeneratedMSBuildEditorConfig.editorconfig
+D:\Timetracker\TimeTracker\TimeTracker\obj\Debug\netcoreapp3.1\TimeTracker.AssemblyInfoInputs.cache
+D:\Timetracker\TimeTracker\TimeTracker\obj\Debug\netcoreapp3.1\TimeTracker.AssemblyInfo.cs
+D:\Timetracker\TimeTracker\TimeTracker\obj\Debug\netcoreapp3.1\TimeTracker.csproj.CoreCompileInputs.cache
+D:\Timetracker\TimeTracker\TimeTracker\obj\Debug\netcoreapp3.1\TimeTracker.dll
+D:\Timetracker\TimeTracker\TimeTracker\obj\Debug\netcoreapp3.1\TimeTracker.pdb
+D:\Timetracker\TimeTracker\TimeTracker\obj\Debug\netcoreapp3.1\TimeTracker.genruntimeconfig.cache
