@@ -1,0 +1,13 @@
+C:\Users\yanch\Desktop\productivity-app\ProductivityApp\bin\Debug\ProductivityApp.exe.config
+C:\Users\yanch\Desktop\productivity-app\ProductivityApp\bin\Debug\ProductivityApp.exe
+C:\Users\yanch\Desktop\productivity-app\ProductivityApp\bin\Debug\ProductivityApp.pdb
+C:\Users\yanch\Desktop\productivity-app\ProductivityApp\obj\Debug\ProductivityApp.csprojAssemblyReference.cache
+C:\Users\yanch\Desktop\productivity-app\ProductivityApp\obj\Debug\ProductivityApp.Properties.Resources.resources
+C:\Users\yanch\Desktop\productivity-app\ProductivityApp\obj\Debug\ProductivityApp.csproj.GenerateResource.cache
+C:\Users\yanch\Desktop\productivity-app\ProductivityApp\obj\Debug\ProductivityApp.csproj.CoreCompileInputs.cache
+C:\Users\yanch\Desktop\productivity-app\ProductivityApp\obj\Debug\ProductivityApp.exe
+C:\Users\yanch\Desktop\productivity-app\ProductivityApp\obj\Debug\ProductivityApp.pdb
+C:\Users\yanch\Desktop\productivity-app\ProductivityApp\obj\Debug\ProductivityApp.Form1.resources
+C:\Users\yanch\Desktop\productivity-app\ProductivityApp\bin\Debug\Newtonsoft.Json.dll
+C:\Users\yanch\Desktop\productivity-app\ProductivityApp\bin\Debug\Newtonsoft.Json.xml
+C:\Users\yanch\Desktop\productivity-app\ProductivityApp\obj\Debug\ProductivityApp.csproj.CopyComplete
