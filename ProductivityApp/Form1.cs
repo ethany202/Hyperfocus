@@ -19,6 +19,8 @@ namespace ProductivityApp
         private string allowedAppsFile = "allowed_apps.json";
         private Rectangle initialSettingsBtn;
         private Rectangle initialAddAppsBtn;
+        private float initialSettingsFontSize;
+        private float initialAddAppsFontSize;
 
         private int formWidth;
         private int formHeight;
@@ -37,6 +39,8 @@ namespace ProductivityApp
 
             initialSettingsBtn = new Rectangle(settingsButton.Location.X, settingsButton.Location.Y, settingsButton.Width, settingsButton.Height);
             initialAddAppsBtn = new Rectangle(addAppsButton.Location.X, addAppsButton.Location.Y, addAppsButton.Width, addAppsButton.Height);
+            initialSettingsFontSize = settingsButton.Font.Size;
+            initialAddAppsFontSize = addAppsButton.Font.Size;
         }
 
         #region Button Click
@@ -73,33 +77,35 @@ namespace ProductivityApp
 
         #region Resize Buttons
 
-        private void resizeButtons()
+        private void ResizeAllButtons()
         {
-            resize(initialSettingsBtn, settingsButton);
-            resize(initialAddAppsBtn, addAppsButton);
+            ResizeButton(initialSettingsBtn, settingsButton, initialSettingsFontSize);
+            ResizeButton(initialAddAppsBtn, addAppsButton, initialAddAppsFontSize);            
         }
 
-        private void resize(Rectangle originalButton, Control newButton)
+        private void ResizeButton(Rectangle originalButton, Control newButton, float fontSize)
         {
-            float xRatio = (float)(this.Width)/(float)(formWidth);
-            float yRatio = (float)(this.Height)/(float)(formHeight);
+            float widthRatio = (float)(this.Width)/(float)(formWidth);
+            float heightRatio = (float)(this.Height)/(float)(formHeight);
 
-            int newX = (int)(originalButton.Location.X * xRatio);
-            int newY = (int)(originalButton.Location.Y * yRatio);
-            int newWidth = (int)(originalButton.Size.Width * xRatio);
-            int newHeight = (int)(originalButton.Size.Height * yRatio);
+            int newX = (int)(originalButton.Location.X * widthRatio);
+            int newY = (int)(originalButton.Location.Y * heightRatio);
+            int newWidth = (int)(originalButton.Size.Width * widthRatio);
+            int newHeight = (int)(originalButton.Size.Height * heightRatio);
+            float newFontSize = fontSize * widthRatio;      //Font size is based on width of button
 
             if (count > 2)      //First 2 calls are ignored since Form is still being made
             {
                 newButton.Location = new Point(newX, newY);
                 newButton.Size = new Size(newWidth, newHeight);
+                newButton.Font = new Font(newButton.Font.FontFamily, newFontSize);
             }
             count++;
         }
 
         private void Form1_Resize(object sender, EventArgs e)
         {
-            resizeButtons();
+            ResizeAllButtons();
         }
 
         #endregion

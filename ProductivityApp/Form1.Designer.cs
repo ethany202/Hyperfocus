@@ -39,7 +39,7 @@
             this.settingsButton.AutoEllipsis = true;
             this.settingsButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.settingsButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.settingsButton.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.settingsButton.Font = new System.Drawing.Font("Verdana", 9.857143F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.settingsButton.Location = new System.Drawing.Point(26, 592);
             this.settingsButton.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.settingsButton.Name = "settingsButton";
