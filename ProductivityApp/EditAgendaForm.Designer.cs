@@ -42,6 +42,7 @@
             this.lowerHour = new System.Windows.Forms.Button();
             this.minus10Min = new System.Windows.Forms.Button();
             this.minus1Minute = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // addEvent
@@ -171,11 +172,22 @@
             this.minus1Minute.Text = "-1";
             this.minus1Minute.UseVisualStyleBackColor = true;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(687, 466);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "Begin";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // EditAgendaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(836, 501);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.minus1Minute);
             this.Controls.Add(this.minus10Min);
             this.Controls.Add(this.lowerHour);
@@ -210,5 +222,6 @@
         private System.Windows.Forms.Button lowerHour;
         private System.Windows.Forms.Button minus10Min;
         private System.Windows.Forms.Button minus1Minute;
+        private System.Windows.Forms.Button button1;
     }
 }

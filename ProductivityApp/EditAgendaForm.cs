@@ -17,6 +17,8 @@ namespace ProductivityApp
         public HomeInterface homePage;
         private Event newEvent;
         private HashSet<string> authorizedApps;
+        private int minuteDisplay=0;
+        private int hourDisplay=1;
 
         public EditAgendaForm(HomeInterface homePage)
         {
@@ -43,6 +45,7 @@ namespace ProductivityApp
 
         private void addEvent_Click(object sender, EventArgs e)
         {
+            //this.allEvents.Items.Add()
             newEvent.SetAuthorizedApps(authorizedApps);
             authorizedApps = new HashSet<string>();
             GlobalSchedule.GetCurrentAgenda().GetAllEvents().Enqueue(newEvent);
@@ -57,6 +60,21 @@ namespace ProductivityApp
         private void AddAuthorizedApps(string appReference)
         {
             authorizedApps.Add(appReference);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            if (GlobalSchedule.GetCurrentAgenda().GetAllEvents().Count != 0)
+            {
+                ArtificialDesktop focusMode = new ArtificialDesktop();
+                focusMode.Show();
+            }
+            else
+            {
+                //show message
+            }
+            
         }
     }
 }
