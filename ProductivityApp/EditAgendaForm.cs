@@ -69,12 +69,22 @@ namespace ProductivityApp
             {
                 ArtificialDesktop focusMode = new ArtificialDesktop();
                 focusMode.Show();
+                new DetectApp();
             }
             else
             {
                 //show message
             }
             
+        }
+        private void minus10Min_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
     }
 }
