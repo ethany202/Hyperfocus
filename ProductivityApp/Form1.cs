@@ -40,7 +40,8 @@ namespace ProductivityApp
         {
             InitializeComponent();
             this.homeForm = homeForm;
-            this.BackColor = Color.FromArgb(30, 30, 30);
+            this.BackColor = Color.FromArgb(25, 25, 25);
+            this.newAgendaButton.BackColor = Color.FromArgb(25, 25, 25);
         }
 
 
@@ -119,6 +120,18 @@ namespace ProductivityApp
         {
             DateTime now = DateTime.Now;
             dateTime.Text = monthInWords[now.Month]+" "+now.Day+", "+ now.Year;
+        }
+
+        private void newAgendaButton_MouseHover(object sender, EventArgs e)
+        {
+            this.newAgendaButton.ForeColor = Color.FromArgb(25, 25, 25);
+            this.newAgendaButton.BackColor = Color.Gainsboro;
+        }
+
+        private void newAgendaButton_MouseLeave(object sender, EventArgs e)
+        {
+            this.newAgendaButton.BackColor = Color.FromArgb(25, 25, 25);
+            this.newAgendaButton.ForeColor = Color.Gainsboro;
         }
     }
 }

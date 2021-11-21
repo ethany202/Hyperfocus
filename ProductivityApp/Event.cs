@@ -49,5 +49,10 @@ namespace ProductivityApp
             this.eventName = eventName;
         }
 
+        public HashSet<string> GetAuthorizedApps()
+        {
+            return authorizedApps;
+        }
+
     }
 }

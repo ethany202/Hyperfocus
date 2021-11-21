@@ -74,7 +74,7 @@ namespace ProductivityApp
             }
             catch (Exception x)
             {
-
+                Debug.WriteLine(x);
             }
 
         }

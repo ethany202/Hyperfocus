@@ -17,14 +17,16 @@ namespace ProductivityApp
         private DateTime startTime;
         private Agenda currentAgenda;
         private Event currentEvent;
+        private DetectApp currentTracker;
 
-
-        public ArtificialDesktop()
+        public ArtificialDesktop(DetectApp currentTracker)
         {
             InitializeComponent();
             startTime = DateTime.Now;
             currentAgenda = GlobalSchedule.GetCurrentAgenda();
             currentEvent = currentAgenda.GetAllEvents().Peek();
+            authorizedAppCount = currentEvent.GetAuthorizedApps().Count;
+            this.currentTracker = currentTracker;
         }
 
         private void timer1_Tick(object sender, EventArgs e)

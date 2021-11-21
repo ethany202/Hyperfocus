@@ -38,15 +38,21 @@
             // 
             // newAgendaButton
             // 
-            this.newAgendaButton.BackColor = System.Drawing.SystemColors.Control;
-            this.newAgendaButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.newAgendaButton.Location = new System.Drawing.Point(647, 12);
+            this.newAgendaButton.BackColor = System.Drawing.Color.DimGray;
+            this.newAgendaButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.newAgendaButton.FlatAppearance.BorderSize = 0;
+            this.newAgendaButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.newAgendaButton.Font = new System.Drawing.Font("Moon", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newAgendaButton.ForeColor = System.Drawing.Color.Gainsboro;
+            this.newAgendaButton.Location = new System.Drawing.Point(642, 24);
             this.newAgendaButton.Name = "newAgendaButton";
-            this.newAgendaButton.Size = new System.Drawing.Size(167, 34);
+            this.newAgendaButton.Size = new System.Drawing.Size(167, 41);
             this.newAgendaButton.TabIndex = 2;
             this.newAgendaButton.Text = "+ New Agenda";
             this.newAgendaButton.UseVisualStyleBackColor = false;
             this.newAgendaButton.Click += new System.EventHandler(this.newAgendaButton_Click);
+            this.newAgendaButton.MouseEnter += new System.EventHandler(this.newAgendaButton_MouseHover);
+            this.newAgendaButton.MouseLeave += new System.EventHandler(this.newAgendaButton_MouseLeave);
             // 
             // moreInfoButton
             // 
@@ -59,20 +65,20 @@
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(77, 59);
+            this.panel1.Location = new System.Drawing.Point(77, 81);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(747, 430);
+            this.panel1.Size = new System.Drawing.Size(747, 408);
             this.panel1.TabIndex = 5;
             // 
             // dateTime
             // 
             this.dateTime.AutoSize = true;
             this.dateTime.BackColor = System.Drawing.Color.Transparent;
-            this.dateTime.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTime.Font = new System.Drawing.Font("Moon", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTime.ForeColor = System.Drawing.Color.Gainsboro;
-            this.dateTime.Location = new System.Drawing.Point(118, 19);
+            this.dateTime.Location = new System.Drawing.Point(120, 33);
             this.dateTime.Name = "dateTime";
-            this.dateTime.Size = new System.Drawing.Size(47, 20);
+            this.dateTime.Size = new System.Drawing.Size(80, 20);
             this.dateTime.TabIndex = 0;
             this.dateTime.Text = "label1";
             // 
@@ -96,6 +102,7 @@
             // 
             // seeAllowedApps
             // 
+            this.seeAllowedApps.Font = new System.Drawing.Font("Moon", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.seeAllowedApps.ForeColor = System.Drawing.SystemColors.ControlText;
             this.seeAllowedApps.Location = new System.Drawing.Point(2, 456);
             this.seeAllowedApps.Margin = new System.Windows.Forms.Padding(3, 3, 3, 4);

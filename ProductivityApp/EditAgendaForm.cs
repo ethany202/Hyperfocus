@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,6 +31,8 @@ namespace ProductivityApp
             authorizedApps = new HashSet<string>();
             allowedAppsName = (List<string>)Form1.GetCurrentlyAllowedApps();
             PopulateListBox();
+
+
         }
 
         private void back_Click(object sender, EventArgs e)
@@ -52,10 +55,30 @@ namespace ProductivityApp
         private void addEvent_Click(object sender, EventArgs e)
         {
             //this.allEvents.Items.Add()
+
+
             newEvent.SetAuthorizedApps(authorizedApps);
             authorizedApps = new HashSet<string>();
             GlobalSchedule.GetCurrentAgenda().GetAllEvents().Enqueue(newEvent);
             newEvent = new Event();
+        }
+
+        private void AddEventNameLabel()
+        {
+            Label eventName = new Label();
+            eventName.Text = this.textBox1.Text;
+            this.eventName.Controls.Add(eventName);
+        }
+
+        private void AddTimeFrameLabel()
+        {
+            Label timeFrame = new Label();
+            //timeFrame.Text = 
+        }
+
+        private void ListAuthorizedApps()
+        {
+
         }
 
         private void AddAuthorizedApps(string appReference)
@@ -63,21 +86,6 @@ namespace ProductivityApp
             authorizedApps.Add(appReference);
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-            if (GlobalSchedule.GetCurrentAgenda().GetAllEvents().Count != 0)
-            {
-                ArtificialDesktop focusMode = new ArtificialDesktop();
-                focusMode.Show();
-                new DetectApp();
-            }
-            else
-            {
-                //show message
-            }
-            
-        }
         private void minus10Min_Click(object sender, EventArgs e)
         {
             if (newEvent.GetMinutes() > 0)
@@ -178,5 +186,23 @@ namespace ProductivityApp
             }
         }
 
+        private void beginAgenda_Click(object sender, EventArgs e)
+        {
+            if (GlobalSchedule.GetCurrentAgenda().GetAllEvents().Count != 0)
+            {
+                DetectApp trackTime = new DetectApp();
+                ArtificialDesktop focusMode = new ArtificialDesktop(trackTime);
+                focusMode.Show();
+            }
+            else
+            {
+                Debug.WriteLine("No Events yet");
+            }
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -1,37 +1,44 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 
 namespace ProductivityApp
 {
-    public class DetectApp
+    public class DetectApp : IDisposable
     {
         public DetectApp()
         {
             StartDetection();
         }
 
+        public void Dispose()
+        {
+            GC.SuppressFinalize(this);
+        }
+
         public void StartDetection()
         {
-            ActiveAppThread active = new ActiveAppThread();
-            Thread activeThread = new Thread(active.StartThread);
-            activeThread.Start();
-            Dictionary<string, Double> a;
-            while (true)
+            new Thread(() =>
             {
-                if (active.activeAppInfoCollector.focusedApp.Keys.Count > 20)
+                ActiveAppThread active = new ActiveAppThread();
+                Thread activeThread = new Thread(active.StartThread);
+                activeThread.Start();
+                Dictionary<string, Double> a;
+                while (true)
                 {
-                    a = active.activeAppInfoCollector.focusedApp;
+                    if (active.activeAppInfoCollector.focusedApp.Keys.Count > 20)
+                    {
+                        a = active.activeAppInfoCollector.focusedApp;
 
-                    break;
+                        break;
+                    }
+                    Debug.WriteLine(active.AppInfo);
+                    Thread.Sleep(1000);
                 }
+            }).Start();
+            
 
-                Thread.Sleep(1000);
-            }
         }
     }
 }
