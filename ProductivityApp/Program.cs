@@ -23,7 +23,7 @@ namespace ProductivityApp
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new HomeInterface());
+            Application.Run(new Hyperfocus());
             //Application.Run(new ArtificialDesktop());
         }
     }

@@ -29,8 +29,8 @@ C:\Users\yanch\Desktop\productivity-app\ProductivityApp\bin\Debug\System.Text.En
 C:\Users\yanch\Desktop\productivity-app\ProductivityApp\bin\Debug\System.Text.Json.xml
 C:\Users\yanch\Desktop\productivity-app\ProductivityApp\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\yanch\Desktop\productivity-app\ProductivityApp\bin\Debug\System.ValueTuple.xml
-C:\Users\yanch\Desktop\productivity-app\ProductivityApp\obj\Debug\ProductivityApp.HomeInterface.resources
 C:\Users\yanch\Desktop\productivity-app\ProductivityApp\obj\Debug\ProductivityApp.EditAgendaForm.resources
 C:\Users\yanch\Desktop\productivity-app\ProductivityApp\obj\Debug\ProductivityApp.AllowedApps.resources
 C:\Users\yanch\Desktop\productivity-app\ProductivityApp\obj\Debug\ProductivityApp.ArtificialDesktop.resources
 C:\Users\yanch\Desktop\productivity-app\ProductivityApp\bin\Debug\MaterialSkin.dll
+C:\Users\yanch\Desktop\productivity-app\ProductivityApp\obj\Debug\ProductivityApp.Hyperfocus.resources

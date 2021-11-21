@@ -234,6 +234,13 @@ namespace ProductivityApp
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.currentApps = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
@@ -246,7 +253,7 @@ namespace ProductivityApp
             this.addEvent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addEvent.Font = new System.Drawing.Font("Moon", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addEvent.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.addEvent.Location = new System.Drawing.Point(641, 53);
+            this.addEvent.Location = new System.Drawing.Point(662, 53);
             this.addEvent.Name = "addEvent";
             this.addEvent.Size = new System.Drawing.Size(169, 55);
             this.addEvent.TabIndex = 0;
@@ -344,7 +351,7 @@ namespace ProductivityApp
             this.panel1.Controls.Add(this.addMinute);
             this.panel1.Controls.Add(this.lowerHour);
             this.panel1.Controls.Add(this.addHour);
-            this.panel1.Location = new System.Drawing.Point(411, 34);
+            this.panel1.Location = new System.Drawing.Point(438, 32);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 100);
             this.panel1.TabIndex = 15;
@@ -352,11 +359,11 @@ namespace ProductivityApp
             // setAuthorizedApps
             // 
             this.setAuthorizedApps.AutoSize = true;
-            this.setAuthorizedApps.Font = new System.Drawing.Font("Moon", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.setAuthorizedApps.Font = new System.Drawing.Font("Moon", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.setAuthorizedApps.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.setAuthorizedApps.Location = new System.Drawing.Point(120, 171);
+            this.setAuthorizedApps.Location = new System.Drawing.Point(74, 158);
             this.setAuthorizedApps.Name = "setAuthorizedApps";
-            this.setAuthorizedApps.Size = new System.Drawing.Size(181, 16);
+            this.setAuthorizedApps.Size = new System.Drawing.Size(213, 20);
             this.setAuthorizedApps.TabIndex = 17;
             this.setAuthorizedApps.Text = "Set Authorized Apps";
             // 
@@ -365,10 +372,10 @@ namespace ProductivityApp
             this.back.BackColor = System.Drawing.Color.DimGray;
             this.back.Cursor = System.Windows.Forms.Cursors.Hand;
             this.back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.back.Font = new System.Drawing.Font("Moon", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.back.Font = new System.Drawing.Font("Moon", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.back.Location = new System.Drawing.Point(0, 0);
             this.back.Name = "back";
-            this.back.Size = new System.Drawing.Size(37, 37);
+            this.back.Size = new System.Drawing.Size(45, 45);
             this.back.TabIndex = 9;
             this.back.Text = "<";
             this.back.UseVisualStyleBackColor = false;
@@ -378,13 +385,13 @@ namespace ProductivityApp
             // 
             this.listBox1.BackColor = System.Drawing.Color.DimGray;
             this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listBox1.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBox1.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox1.ForeColor = System.Drawing.Color.Gainsboro;
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 18;
-            this.listBox1.Location = new System.Drawing.Point(307, 206);
+            this.listBox1.ItemHeight = 20;
+            this.listBox1.Location = new System.Drawing.Point(300, 184);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(247, 72);
+            this.listBox1.Size = new System.Drawing.Size(261, 80);
             this.listBox1.TabIndex = 18;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
@@ -392,11 +399,11 @@ namespace ProductivityApp
             // 
             this.richTextBox1.BackColor = System.Drawing.Color.DimGray;
             this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox1.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox1.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.richTextBox1.Location = new System.Drawing.Point(307, 165);
+            this.richTextBox1.Location = new System.Drawing.Point(300, 154);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(247, 24);
+            this.richTextBox1.Size = new System.Drawing.Size(261, 24);
             this.richTextBox1.TabIndex = 19;
             this.richTextBox1.Text = "";
             this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
@@ -405,11 +412,10 @@ namespace ProductivityApp
             // 
             this.textBox1.Font = new System.Drawing.Font("Moon", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.textBox1.Location = new System.Drawing.Point(175, 70);
+            this.textBox1.Location = new System.Drawing.Point(185, 69);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(230, 22);
+            this.textBox1.Size = new System.Drawing.Size(239, 22);
             this.textBox1.TabIndex = 20;
-            this.textBox1.Text = "Name";
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.textBox1.MouseEnter += new System.EventHandler(this.textBox1_MouseEnter);
             this.textBox1.MouseLeave += new System.EventHandler(this.textBox1_MouseLeave);
@@ -421,9 +427,9 @@ namespace ProductivityApp
             this.addAuthorizedApp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addAuthorizedApp.Font = new System.Drawing.Font("Moon", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addAuthorizedApp.ForeColor = System.Drawing.Color.Black;
-            this.addAuthorizedApp.Location = new System.Drawing.Point(600, 165);
+            this.addAuthorizedApp.Location = new System.Drawing.Point(607, 153);
             this.addAuthorizedApp.Name = "addAuthorizedApp";
-            this.addAuthorizedApp.Size = new System.Drawing.Size(111, 24);
+            this.addAuthorizedApp.Size = new System.Drawing.Size(111, 25);
             this.addAuthorizedApp.TabIndex = 21;
             this.addAuthorizedApp.Text = "Include App";
             this.addAuthorizedApp.UseVisualStyleBackColor = false;
@@ -434,12 +440,12 @@ namespace ProductivityApp
             this.beginAgenda.Cursor = System.Windows.Forms.Cursors.Hand;
             this.beginAgenda.FlatAppearance.BorderSize = 0;
             this.beginAgenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.beginAgenda.Font = new System.Drawing.Font("Moon", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.beginAgenda.Font = new System.Drawing.Font("Moon", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.beginAgenda.ForeColor = System.Drawing.Color.Gainsboro;
-            this.beginAgenda.Location = new System.Drawing.Point(0, 471);
+            this.beginAgenda.Location = new System.Drawing.Point(0, 460);
             this.beginAgenda.Name = "beginAgenda";
             this.beginAgenda.Padding = new System.Windows.Forms.Padding(1, 0, 0, 0);
-            this.beginAgenda.Size = new System.Drawing.Size(68, 28);
+            this.beginAgenda.Size = new System.Drawing.Size(77, 35);
             this.beginAgenda.TabIndex = 22;
             this.beginAgenda.Text = "Begin";
             this.beginAgenda.UseVisualStyleBackColor = true;
@@ -475,12 +481,12 @@ namespace ProductivityApp
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Moon", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label2.Location = new System.Drawing.Point(65, 5);
-            this.label2.Margin = new System.Windows.Forms.Padding(65, 5, 3, 5);
+            this.label2.Location = new System.Drawing.Point(45, 5);
+            this.label2.Margin = new System.Windows.Forms.Padding(45, 5, 3, 5);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(157, 16);
+            this.label2.Size = new System.Drawing.Size(190, 16);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Authorized Apps";
+            this.label2.Text = "All Authorized Apps";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // flowLayoutPanel1
@@ -489,9 +495,9 @@ namespace ProductivityApp
             this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flowLayoutPanel1.Controls.Add(this.eventName);
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(58, 304);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(58, 299);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(229, 144);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(229, 155);
             this.flowLayoutPanel1.TabIndex = 24;
             this.flowLayoutPanel1.WrapContents = false;
             // 
@@ -501,9 +507,9 @@ namespace ProductivityApp
             this.flowLayoutPanel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flowLayoutPanel2.Controls.Add(this.time);
             this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(285, 304);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(285, 299);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(234, 144);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(234, 155);
             this.flowLayoutPanel2.TabIndex = 25;
             // 
             // flowLayoutPanel3
@@ -512,9 +518,9 @@ namespace ProductivityApp
             this.flowLayoutPanel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flowLayoutPanel3.Controls.Add(this.label2);
             this.flowLayoutPanel3.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(515, 304);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(515, 299);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(249, 144);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(316, 155);
             this.flowLayoutPanel3.TabIndex = 26;
             // 
             // currentApps
@@ -522,18 +528,102 @@ namespace ProductivityApp
             this.currentApps.AutoSize = true;
             this.currentApps.Font = new System.Drawing.Font("Moon", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.currentApps.ForeColor = System.Drawing.Color.Gainsboro;
-            this.currentApps.Location = new System.Drawing.Point(598, 206);
+            this.currentApps.Location = new System.Drawing.Point(605, 193);
             this.currentApps.Name = "currentApps";
-            this.currentApps.Size = new System.Drawing.Size(35, 11);
+            this.currentApps.Size = new System.Drawing.Size(8, 11);
             this.currentApps.TabIndex = 27;
-            this.currentApps.Text = "Temp";
+            this.currentApps.Text = ":";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Moon", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label4.Location = new System.Drawing.Point(605, 204);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(8, 11);
+            this.label4.TabIndex = 29;
+            this.label4.Text = ":";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Moon", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label5.Location = new System.Drawing.Point(605, 215);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(8, 11);
+            this.label5.TabIndex = 30;
+            this.label5.Text = ":";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Moon", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label6.Location = new System.Drawing.Point(605, 226);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(8, 11);
+            this.label6.TabIndex = 31;
+            this.label6.Text = ":";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Moon", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label7.Location = new System.Drawing.Point(605, 237);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(8, 11);
+            this.label7.TabIndex = 32;
+            this.label7.Text = ":";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Moon", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label8.Location = new System.Drawing.Point(605, 248);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(8, 11);
+            this.label8.TabIndex = 33;
+            this.label8.Text = ":";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Moon", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label9.Location = new System.Drawing.Point(605, 259);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(8, 11);
+            this.label9.TabIndex = 34;
+            this.label9.Text = ":";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Moon", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label10.Location = new System.Drawing.Point(605, 270);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(8, 11);
+            this.label10.TabIndex = 35;
+            this.label10.Text = ":";
             // 
             // EditAgendaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(836, 501);
+            this.ClientSize = new System.Drawing.Size(879, 525);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.currentApps);
             this.Controls.Add(this.flowLayoutPanel3);
             this.Controls.Add(this.flowLayoutPanel2);
@@ -613,5 +703,12 @@ private System.Windows.Forms.Button button1;*/
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private System.Windows.Forms.Label currentApps;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
     }
 }

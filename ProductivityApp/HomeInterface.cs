@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProductivityApp
 {
-    public partial class HomeInterface : Form
+    public partial class Hyperfocus : Form
     {
-        public HomeInterface()
+        public Hyperfocus()
         {
             InitializeComponent();
             Form1 homePage = new Form1(this);
@@ -24,6 +24,10 @@ namespace ProductivityApp
             homePage.BringToFront();
             homePage.Show();
         }
-        
+
+        private void HomeInterface_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

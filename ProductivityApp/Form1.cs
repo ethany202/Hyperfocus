@@ -33,10 +33,10 @@ namespace ProductivityApp
             {12, "December" }
         };
 
-        private static string allowedAppsFile = AppContext.BaseDirectory+"allowed_apps.json";
-        private HomeInterface homeForm;
+        private static string allowedAppsFile = Directory.GetCurrentDirectory() + "\\allowed_apps.json";
+        private Hyperfocus homeForm;
 
-        public Form1(HomeInterface homeForm)
+        public Form1(Hyperfocus homeForm)
         {
             InitializeComponent();
             this.homeForm = homeForm;
@@ -63,7 +63,10 @@ namespace ProductivityApp
 
                 foreach(string appRoot in apps)
                 {
-                    AllowedApps.appNameInRoot.Add(GetAppName(appRoot), appRoot);
+                    if (!AllowedApps.appNameInRoot.ContainsKey(GetAppName(appRoot)))
+                    {
+                        AllowedApps.appNameInRoot.Add(GetAppName(appRoot), appRoot);
+                    }
                 }
 
             }
@@ -99,6 +102,7 @@ namespace ProductivityApp
             agendaPage.Dock = DockStyle.Fill;
             homeForm.panel1.Controls.Add(agendaPage);
             homeForm.panel1.Tag = agendaPage;
+            //homeForm.panel1.Controls.Remove(this);
             agendaPage.BringToFront();
             agendaPage.Show();
 
@@ -132,6 +136,16 @@ namespace ProductivityApp
         {
             this.newAgendaButton.BackColor = Color.FromArgb(25, 25, 25);
             this.newAgendaButton.ForeColor = Color.Gainsboro;
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -15,12 +15,17 @@ namespace ProductivityApp
     public partial class EditAgendaForm : Form
     {
 
-        public HomeInterface homePage;
+        public Hyperfocus homePage;
         private Event newEvent;
         private HashSet<string> authorizedApps;
         private List<string> allowedAppsName;
 
-        public EditAgendaForm(HomeInterface homePage)
+        private HashSet<string> agendaAllApps;
+
+        private Label[] eventApps;
+        private int eventAppCount = 0;
+
+        public EditAgendaForm(Hyperfocus homePage)
         {
             InitializeComponent();
             this.BackColor = Color.FromArgb(30, 30, 30);
@@ -29,10 +34,16 @@ namespace ProductivityApp
             this.homePage = homePage;
             this.newEvent = new Event();
             authorizedApps = new HashSet<string>();
+            agendaAllApps = new HashSet<string>();
             allowedAppsName = (List<string>)Form1.GetCurrentlyAllowedApps();
             PopulateListBox();
+            PopulateEventLabels();
 
+        }
 
+        private void PopulateEventLabels()
+        {
+            eventApps = new Label[]{ currentApps, label4, label5, label6, label7, label8, label9, label10 };
         }
 
         private void back_Click(object sender, EventArgs e)
@@ -48,15 +59,29 @@ namespace ProductivityApp
 
         private void addMinute_Click(object sender, EventArgs e)
         {
-            newEvent.IncreaseTimeFrame(10); UpdateTimeLabel();
+            //newEvent.IncreaseTimeFrame(10); 
+            newEvent.IncreaseTimeFrame(10);
+            UpdateTimeLabel();
 
         }
 
         private void addEvent_Click(object sender, EventArgs e)
         {
             //this.allEvents.Items.Add()
+            if (GlobalSchedule.GetCurrentAgenda().GetAllEvents().Count >= 5)
+            {
+                return;
+            }
+            AddEventNameLabel();
+            AddTimeFrameLabel();
+            ListAuthorizedApps();
 
-
+            for(int i = 0; i < eventApps.Length; i++)
+            {
+                eventApps[i].Text = ":";
+            }
+            eventAppCount = 0;
+            timeFrame.Text = "Time: 01 : 00";
             newEvent.SetAuthorizedApps(authorizedApps);
             authorizedApps = new HashSet<string>();
             GlobalSchedule.GetCurrentAgenda().GetAllEvents().Enqueue(newEvent);
@@ -66,19 +91,38 @@ namespace ProductivityApp
         private void AddEventNameLabel()
         {
             Label eventName = new Label();
+            eventName.Font = new Font(richTextBox1.Font.Name, 10); 
             eventName.Text = this.textBox1.Text;
-            this.eventName.Controls.Add(eventName);
+            eventName.ForeColor = Color.Gainsboro;
+            
+            this.flowLayoutPanel1.Controls.Add(eventName);
         }
 
         private void AddTimeFrameLabel()
         {
             Label timeFrame = new Label();
-            //timeFrame.Text = 
+            timeFrame.Font = new Font(richTextBox1.Font.Name, 10);
+            timeFrame.Text = (newEvent.GetTimeFrame() + " minutes");
+            timeFrame.ForeColor = Color.Gainsboro;
+            this.flowLayoutPanel2.Controls.Add(timeFrame);
         }
 
         private void ListAuthorizedApps()
         {
-
+           
+            foreach(string appName in authorizedApps)
+            {
+                if (!agendaAllApps.Contains(appName))
+                {
+                    Label authorizedAppsLabel = new Label();
+                    authorizedAppsLabel.Text += Form1.GetAppName(appName);
+                    authorizedAppsLabel.ForeColor = Color.Gainsboro;
+                    authorizedAppsLabel.Font = new Font(richTextBox1.Font.Name, 7);
+                    this.flowLayoutPanel3.Controls.Add(authorizedAppsLabel);
+                }
+                agendaAllApps.Add(appName);
+            }
+            
         }
 
         private void AddAuthorizedApps(string appReference)
@@ -90,6 +134,7 @@ namespace ProductivityApp
         {
             if (newEvent.GetMinutes() > 0)
             {
+                //newEvent.IncreaseTimeFrame(-10);
                 newEvent.IncreaseTimeFrame(-10);
                 UpdateTimeLabel();
             }
@@ -175,29 +220,36 @@ namespace ProductivityApp
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             string appName = listBox1.GetItemText(listBox1.SelectedItem);
-            Debug.WriteLine(appName);
         }
 
         private void addAuthorizedApp_Click(object sender, EventArgs e)
         {
             if (listBox1.SelectedItem != null)
             {
-                AddAuthorizedApps(AllowedApps.appNameInRoot[listBox1.GetItemText(listBox1.SelectedItem)]);
+                string selectedAppName = listBox1.GetItemText(listBox1.SelectedItem);
+                if (authorizedApps.Contains(AllowedApps.appNameInRoot[selectedAppName]))
+                {
+                    return;
+                }
+                if (authorizedApps.Count < 8)
+                {
+                    AddAuthorizedApps(AllowedApps.appNameInRoot[selectedAppName]);
+                    eventApps[eventAppCount].Text += selectedAppName;
+                    eventAppCount++;
+                }
+                
             }
+
         }
 
         private void beginAgenda_Click(object sender, EventArgs e)
         {
             if (GlobalSchedule.GetCurrentAgenda().GetAllEvents().Count != 0)
             {
-                DetectApp trackTime = new DetectApp();
-                ArtificialDesktop focusMode = new ArtificialDesktop(trackTime);
+                ArtificialDesktop focusMode = new ArtificialDesktop();
                 focusMode.Show();
             }
-            else
-            {
-                Debug.WriteLine("No Events yet");
-            }
+
         }
 
         private void label2_Click(object sender, EventArgs e)

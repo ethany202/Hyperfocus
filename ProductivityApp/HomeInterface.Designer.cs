@@ -1,6 +1,6 @@
 ﻿namespace ProductivityApp
 {
-    partial class HomeInterface
+    partial class Hyperfocus
     {
         /// <summary>
         /// Required designer variable.
@@ -33,19 +33,25 @@
             // 
             // panel1
             // 
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(836, 501);
+            this.panel1.Size = new System.Drawing.Size(863, 510);
             this.panel1.TabIndex = 0;
             // 
-            // HomeInterface
+            // Hyperfocus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(836, 501);
+            this.ClientSize = new System.Drawing.Size(863, 510);
             this.Controls.Add(this.panel1);
-            this.Name = "HomeInterface";
-            this.Text = "HomeInterface";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "Hyperfocus";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Hyperfocus";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.HomeInterface_FormClosed);
             this.ResumeLayout(false);
 
         }
